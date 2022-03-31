@@ -1,0 +1,22 @@
+<div class="child">
+    <table>
+        <tr *ngFor="let item of taskList; index as i">
+            <td>{{ i+1 }}</td>
+            <td>{{ item.task }}</td>
+            <td><input type="checkbox" [checked]='item.status' (click)="w(i)"></td>
+            <td [style.color]="item.status?'green':'red'"> {{ item.isDone }} </td>
+            <td><input type="button" value="Edit" class="edit" (click)="editUser(i)"></td>
+            <td><input type="button" value="Delete" class="delete" (click)="deleteUser(i)" [disabled]="!item.status"></td>
+        </tr>
+        <tr *ngIf="changePos">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" name="" id="" [(ngModel)]="taskName"></td>
+            <td><input type="button" value="Save" class="save" (click)="saveBtn()"></td>
+        </tr>
+        
+    </table>
+    
+</div>
+

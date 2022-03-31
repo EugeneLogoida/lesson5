@@ -1,0 +1,36 @@
+<app-menu></app-menu>
+<div class="wrapper">
+    <div class="left">
+        <p>Login</p>
+        <input type="text" name="" id="" [(ngModel)]="login" placeholder="Enter login">
+        <p>Password</p>
+        <input type="password" name="" id="" [(ngModel)]="password" placeholder="Enter password">
+        <p>E-mail</p>
+        <input type="email" name="" id="" [(ngModel)]="email" placeholder="Enter email">
+        <input *ngIf="!editStatus" type="button" value="Add user" class="green-btn btn" (click)="addUser()" [disabled]="!login || !password || !email">
+        <input *ngIf="editStatus" type="button" value="Save edit user" class="blue-btn btn" (click)="saveEditUser()">
+    </div>
+    <div class="right">
+        <table>
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Login</td>
+                    <td>Password</td>
+                    <td>Email</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
+                </tr>
+            </thead>
+            <tr *ngFor="let item of userList; index as i">
+                <td>{{ i+1 }}</td>
+                <td>{{ item.login }}</td>
+                <td>{{ item.password }}</td>
+                <td>{{ item.email }}</td>
+                <td><input type="button" value="Edit" class="edit" (click)="editUser(i)" [disabled]="editStatus"    ></td>
+                <td><input type="button" value="Delete" class="delete" (click)="deleteUser(i)" [disabled]="editStatus"></td>
+            </tr>
+        </table>
+        
+    </div>
+</div>

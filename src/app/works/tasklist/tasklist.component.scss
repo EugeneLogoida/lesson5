@@ -1,0 +1,27 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+.par{
+    padding: 0 50px;
+    .task{
+        display: flex;
+        justify-content: space-between;
+        height: 30px;
+        input{
+            width: 700px;
+        }
+        button{
+            width: 200px;
+            color: white;
+            background-color: rgb(0, 161, 0);
+            border: none;
+        border-radius: 5px;
+        }
+        button:hover{
+            background-color: rgb(8, 94, 0);
+            cursor: pointer;
+        }
+    }
+}

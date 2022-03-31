@@ -1,0 +1,73 @@
+.wrapper{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-around;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    input{
+        margin-bottom: 18px;
+        height: 25px;
+    }
+    .btn{
+        color: whitesmoke;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+    }
+    .blue-btn{
+        background-color: rgb(0, 162, 255); 
+    }
+    .green-btn{
+        background-color: green;
+    }
+    .blue-btn:hover{
+        background-color: rgb(0, 89, 255); 
+        cursor: pointer;
+    }
+    .green-btn:hover{
+        background-color: rgb(8, 94, 0);
+        cursor: pointer;
+    }
+    
+    
+}
+.right{
+    width: 45%;
+    .edit{
+        background-color: orange;
+        height: 30px;
+        border-radius: 3px;
+        border: none;
+    }
+    .delete{
+        background-color: tomato;
+        color:whitesmoke;
+        height: 30px;
+        border: none;
+        border-radius: 3px;
+    }
+    .edit:hover{
+        background-color: rgb(221, 144, 0);
+        cursor: pointer;
+    }
+    .delete:hover{
+        background-color: rgb(221, 80, 55);
+        cursor: pointer;
+    }
+    .edit:disabled{
+        background-color: rgb(255, 187, 61);
+    }
+    .delete:disabled{
+        background-color: rgb(255, 117, 93);
+    }
+    
+}
+table{
+    border-spacing: 24px;
+}
+

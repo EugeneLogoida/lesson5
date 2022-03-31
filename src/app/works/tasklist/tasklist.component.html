@@ -1,0 +1,13 @@
+<app-menu></app-menu>
+<div class="par">
+    <h2>Count of task {{ taskListi.length }}</h2>
+    <p></p>
+    <hr>
+    <div class="task">
+        <input type="text" name="" id="" [(ngModel)]="nTask">
+        <button (click)="addTask()">Add</button>
+
+    </div>
+    <hr>
+</div>
+<app-table [newTask]="nTask" [taskList]="taskListi"></app-table>
